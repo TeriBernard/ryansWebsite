@@ -11,6 +11,8 @@ body {
   padding-bottom: 6rem;
   margin-bottom: 0;
   background-color: #fff;
+  background-image: url("../img/jiafeng-wang-blackcar-shinyrims.jpg");
+  background-size: cover;
 }
 
 .jumbotron p:last-child {
@@ -18,7 +20,8 @@ body {
 }
 
 .jumbotron-heading {
-  font-weight: 300;
+  font-weight: 700;
+  color: #fff;
 }
 
 .jumbotron .container {
@@ -46,7 +49,6 @@ body {
 
 .card-text {
   font-size: 85%;
-  color: orange;
 }
 
 footer {
