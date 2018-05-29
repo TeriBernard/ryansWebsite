@@ -1,0 +1,66 @@
+/* NOTES:
+Because of the 'cascading' in Cascading Style Sheets, 
+the styles defined here will overwrite or modify any that are included before them.
+*/
+
+/* Header changes */
+header {
+    /* Makes header seem like part of the jumbotron */
+    position: absolute; 
+    /* Explicitly defining top and left can avoid a lot of weird behaviour on different browsers  */
+    top: 0;
+    left: 0;
+    /* Because it's position is absolute, you now have to force width */
+    width: 100%;
+}
+
+header .navbar.bg-dark {
+    /* Making the navbar see through lets the jumbtron picture give some texture */
+    background-image: linear-gradient( rgba(0,0,0,.9), rgba(0,0,0,.9) );
+    /* Overrides default bootstrap color */
+    background-color: rgba(0,0,0,.0) !important;
+} 
+
+/* Overrides default bootstrap color for collapsed section in header */
+header .collapse.bg-dark,
+header .collapsing.bg-dark  {
+    background-color: rgba(0,0,0,1) !important;
+}
+
+/* Main jumbotron changes */
+.jumbotron.main-jumbo {
+    /* This is the easiest way to align blocks vertically */
+    display: flex;
+    /* One of the most useful css things I've learned is how to add an overlay color to 
+    a background image. 
+    With a semi-transparent gradient you can keep the image but control the general color
+    to make text more visible, no matter what the image colors are. */
+    background-image: 
+        linear-gradient(
+            rgba(0,0,0,.6),
+            rgba(0,0,0,.8)
+        ), 
+        url("../img/jiafeng-wang-blackcar-shinyrims.jpg");
+    /* Forces jumbo to full screen height*/
+    min-height: 100vh;
+}
+
+/* Jumbotron Button changes */
+.jumbotron.main-jumbo .container {
+    /* Vertically centers this block(only works with a display: flex parent)  */
+    align-self: center;
+}
+
+.jumbotron.main-jumbo .container .btn {
+    /* Makes background visible */
+    background-color: rgba(0,0,0,.0);
+    font-size: 20px;
+}
+
+/* Ensures fade-in effet */
+.btn-success:hover {
+    background-color: #218838 !important;
+}
+.btn-primary:hover{
+    background-color: #0069d9 !important;
+}
