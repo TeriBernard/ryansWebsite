@@ -1,5 +1,5 @@
 body {
-  min-height: 75rem; /* Can be removed; just added for demo purposes */
+  /* min-height: 75rem; */ /* Can be removed; just added for demo purposes */
 }
 
 .navbar {
@@ -33,7 +33,6 @@ body {
 }
 
 .album {
-  /* min-height: 50rem; Can be removed; just added for demo purposes */
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #f7f7f7;
@@ -56,10 +55,6 @@ body {
 }
 
 footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
