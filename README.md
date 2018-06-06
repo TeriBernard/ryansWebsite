@@ -2,6 +2,6 @@
 simple website being built by customizing the album example from bootstrap4
 
 ## ToDo
-  Hide sticky footer on mobile
-  Slim down sticky footer, period
+  Remove fixed-footer on mobile (and all views, probably)
+  Slim down footer, period
   Hide 'Contact Us' section on mobile
