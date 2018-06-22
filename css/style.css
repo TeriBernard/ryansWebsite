@@ -1,5 +1,5 @@
 body {
-  min-height: 75rem; /* Can be removed; just added for demo purposes */
+  /* min-height: 75rem; */ /* Can be removed; just added for demo purposes */
 }
 
 .navbar {
@@ -11,7 +11,7 @@ body {
   padding-bottom: 6rem;
   margin-bottom: 0;
   background-color: #fff;
-  background-image: url("../img/header/jumbotron-background.jpg");
+  background-image: url("../img/black-car-into-sunset.jpg");
   background-size: cover;
 }
 
@@ -33,7 +33,6 @@ body {
 }
 
 .album {
-  /* min-height: 50rem; Can be removed; just added for demo purposes */
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #f7f7f7;
@@ -58,8 +57,4 @@ body {
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
 }
