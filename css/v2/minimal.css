@@ -1,0 +1,139 @@
+/* 
+    Resets and normalizes styles across browsers to make design consistent.
+    It's minimal but bare in mind this sets css on every single element individually(not cascading),
+    so only use this when absolutely needed because it does affect display times.
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* In contrast to '*', this will cascade to lower elements. */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+/*  Can add this class to an element to change font.
+    Didn't name it after the font itself in case the font is changed. 
+    The 'h' is for 'heading'. */
+.h-font {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+/* **************** ABOVE FOLD **** */
+
+/* This is why I love flex-box. I don't even need media queries for this:
+ These main blocks are side-by-side when able, otherwise(i.e. small screens) they stack. */
+.above-fold-block {
+    min-height: 50vh;
+    /* Makes block take up full amount of available space, both stacked and in row. */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header.above-fold {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    /* Children with position:absolute will be relative to this element. */
+    position: relative;
+    /* This is important. 
+    Even though elements will be stacked on small screens, setting this to 'row' means it will be trying to display them side-by-side. */
+    flex-direction: row;
+    /* Also important. If blocks aren't stacking, this isn't set to wrap so flexbox is forcing them into rows. */
+    flex-wrap: wrap;
+}
+
+
+/* ABOVE FOLD LOGO BLOCK */
+header .logo-block {
+    background-color: rgb(245,231,217);
+}
+
+.above-fold-phone {
+    /* Removes this element from the mix so it's easier to center logo */
+    position: absolute;
+    text-align: center;
+    margin: 20px 0;
+    align-self: flex-start;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: rgb(116, 56, 56);
+}
+
+/* Personal preference, I think it's easier to work with images when they're wrapped. */
+.logo-img-wrapper {
+    width: 90%;
+    /* Setting 'width' as a percentage and 'max-width' as a hard value avoids having to set a media query for responsiveness.  
+    Using vh for these specific ratios is just more dynamic, but I'm using a px fallback in case the browser doesn't support vh/vw.
+    */
+    max-width: 700px;
+    max-width: 68vh;
+    margin: auto;
+}
+/* Restricts image to not be larger than wrapper. 
+Using 'max-*' instead of explicit percentages keeps ratio correct. */
+.logo-img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* ABOVE FOLD DESCRIPTION BLOCK */
+header .description-block {
+    flex-direction: column;
+    padding: 2%;
+    background-color: rgb(245,245,245);
+}
+
+
+/*  DESCRIPTION BLOCK NAV */
+.main-nav {
+    margin-bottom: auto;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    max-width: 300px;
+}
+.nav-item {
+    margin: 1px 0;
+    padding: 5px;
+    text-decoration: none;
+    border-bottom: 1px solid #e8604b;
+    color: #cc3e28;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+    box-shadow: 0 6px 8px -6px rgba(232, 96, 75,1);
+}
+/* Effects are cool, but also add a ton for the 'feel' of the site.
+Just gotta keep 'em snappy. */
+.nav-item:hover {
+    transition: text-shadow .1s, box-shadow .1s;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    box-shadow: 0 7px 8px -6px rgb(129, 55, 40, 1);
+}
+
+/*  DESCRIPTION BLOCK TEXT */
+.description-block .description-text-wrapper{
+    width: 90%;
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: auto;
+}
+.description-text-wrapper .description-heading {
+    font-size: 1.5em;
+}
+.description-block .description-text-wrapper p {
+    margin-top: 20px;
+}
+
+
+
+
+/* **** GALLERY **** */
+
+/* **** CONTACT **** */
