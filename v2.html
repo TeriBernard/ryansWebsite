@@ -11,14 +11,19 @@
 
     <!-- Custom minimal styles -->
     <link href="css/v2/minimal.css" rel="stylesheet">
-    <!-- FONTS Raleway is only embedded as bold -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700|Roboto" rel="stylesheet">
+    <link href="css/v2/contact.css" rel="stylesheet">
+    <link href="css/v2/footer.css" rel="stylesheet">
+    <!-- ezee-gallery-->
+    <link rel="stylesheet" href="css/v2/ezee-gallery.min.css" />
+    <link href="css/v2/ezee-gallery-mods.css" rel="stylesheet">
+
+    <!-- FONTS (Raleway is only embedded as bold )-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900|Roboto" rel="stylesheet">
     <!-- Font Awesome CDN-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <!-- ezee-gallery-->
     
-    <link rel="stylesheet" href="css/v2/ezee-gallery.min.css" />
+    
   </head>
 
   <body>
@@ -49,9 +54,9 @@
         </nav>
 
         <div class="description-text-wrapper">
-          <h1 class="description-heading h-font">I REPAIR CAR RIMS TO LIKE NEW</h1>
+          <h1 class="description-heading h-font">I repair car rims to like new.</h1>
           <p>This will be the majority of text on the page, so it should be descriptive. Keywords are helpful, just be careful not to keyword-stuff. This is also the place to write in the tone you're going for.</p>
-          <p>Should probably be a medium amount of text, enough to fill out the bottom half of a mobile screen at 16px-18px but I would aim to not let it go beyond that.</p>
+          <p>Should probably be a medium amount of text, enough to fill out the bottom half of a mobile screen at 16px-18px. Could be multiple headings and descriptions.</p>
           <p>Sed sit amet ex in lacus aliquam dignissim quis convallis est. Fusce eget vulputate diam. Pellentesque massa velit, euismod id mi et, blandit fermentum lacus. Mauris eu feugiat odio, nec bibendum lorem. Sed interdum magna vel aliquam ultrices. Nam a sem viverra, lobortis neque non, efficitur arcu. Sed tincidunt orci dapibus vehicula mattis.</p>
         </div>
       </div>
@@ -59,19 +64,80 @@
     </header>
 
     <section id='gallery'>
-      <h1 class="gallery-heading">Gallery</h1>
       <div class="ezee-gallery">
-        <img src='img/rims/rim.1.before.jpg' alt='A damaged rim'/>
-        <img src='img/rims/rim.1.after.jpg' alt='A beatiful fixed rim'/>
+        <img src='img/rims/rim.1.jpg' alt='A before and after rim shot'/>
+        <img src='img/rims/rim.1.jpg' alt='A before and after rim shot'/>
+        <img src='img/rims/rim.1.jpg' alt='A before and after rim shot'/>
+        <img src='img/rims/rim.1.jpg' alt='A before and after rim shot'/>
       </div>
     </section>
 
     <section id='contact'>
-        <h1 class="gallery-heading">Contact</h1>
-        <div>
+        <h2 class="gallery-heading h-font">Feel free to contact me!</h2>
+        <p class='contact-invite'>If you need some rims repaired to a pristine, shiny finish(TODO CHANGE WORDING), feel free to contact me using the form below.</p>
+        <form class="contact-form">
+
+          <!-- TODO change placeholder text -->
+          <!-- NAME -->
+          <label class='input-block' for='contact-name'>
+            <span class="input-heading">
+              <span class="fas fa-user"></span> Name 
+            </span>
+            <input 
+            placeholder="The Cookie Monster"
+            required="required"
+            type='text' 
+            id='contact-name'
+            class='contact-name' 
+            name='name' />
+          </label>
+
+          <!-- PHONE -->
+          <label class='input-block' for='contact-phone'>
+              <span class="input-heading">
+                <span class="fas fa-phone"></span> Phone 
+              </span>
+              <input
+              placeholder="555 555-5555"
+              type='tel' 
+              id='contact-phone' 
+              class='contact-phone' 
+              name='phone' />
+            </label>
+
+          <!-- EMAIL -->
+          <label class='input-block' for='contact-email'>
+            <span class="input-heading">
+              <span class="fas fa-envelope"></span> Email 
+            </span>
+            <input 
+            placeholder="NomNOMNOM@crumbs.com"
+            type='email' 
+            id='contact-email' 
+            class='contact-email' 
+            name='email' />
+          </label>
+
+          <textarea
+          class="contact-blurb input-block"
+          placeholder="(Optional) ME EAT COOKIE. ME WANT MOAR COOOOOOOOKEEEEEE."
+          ></textarea>
           
-        </div>
+
+          <button type='submit' class="submit-btn" > 
+            <span class="fas fa-paper-plane"></span> Send
+          </button>
+        </form>
       </section>
+
+      <footer>
+        <div class="copyright">&copy; Ryan's Rim Repair 2018</div>
+        <div class="design-by">
+          Design by <a href="#" class="design-by-link">Bernard Technology Partners</a> 
+          & <a href='#' class="design-by-link">Max Bernard Web Design</a>
+        </div>
+      </footer>
+
 
       <script src="js/ezee-gallery.min.js"></script>
   </body>
