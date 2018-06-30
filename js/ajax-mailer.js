@@ -44,9 +44,11 @@ function handleContactForm(formVals, formElement) {
 }
 
 function emailAjaxData(data){
+    var JSONData = JSON.stringify(data);
+
     return fetch(url, {
-        method: 'POST', // or 'PUT'
-        body: JSON.stringify(data), // data can be `string` or {object}!
+        method: 'POST', 
+        body: JSONData,
         headers:{
           'Content-Type': 'application/json'
         }
