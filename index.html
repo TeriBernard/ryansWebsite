@@ -75,70 +75,79 @@
     <section id='contact'>
         <h2 class="gallery-heading h-font">Feel free to contact me!</h2>
         <p class='contact-invite'>If you need some rims repaired to a pristine, shiny finish(TODO CHANGE WORDING), feel free to contact me using the form below.</p>
-        <form class="contact-form">
+        <div>
 
-          <!-- TODO change placeholder text -->
-          <!-- NAME -->
-          <label class='input-block' for='contact-name'>
-            <span class="input-heading">
-              <span class="fas fa-user"></span> Name 
-            </span>
-            <input 
-            placeholder="The Cookie Monster"
-            required="required"
-            type='text' 
-            id='contact-name'
-            class='contact-name' 
-            name='name' />
-          </label>
-
-          <!-- PHONE -->
-          <label class='input-block' for='contact-phone'>
+          <form onsubmit="handleContactForm" class="contact-form ezee-ajax-form">
+            <!-- TODO change placeholder text -->
+            <!-- NAME -->
+            <label class='input-block' for='contact-name'>
               <span class="input-heading">
-                <span class="fas fa-phone"></span> Phone 
+                <span class="fas fa-user"></span> Name 
               </span>
-              <input
-              placeholder="555 555-5555"
-              type='tel' 
-              id='contact-phone' 
-              class='contact-phone' 
-              name='phone' />
+              <input 
+              value='Maximus Prime'
+              placeholder="e.g. John Smith"
+              required="required"
+              type='text' 
+              id='contact-name'
+              class='contact-name' 
+              name='name' />
             </label>
 
-          <!-- EMAIL -->
-          <label class='input-block' for='contact-email'>
-            <span class="input-heading">
-              <span class="fas fa-envelope"></span> Email 
-            </span>
-            <input 
-            placeholder="NomNOMNOM@crumbs.com"
-            type='email' 
-            id='contact-email' 
-            class='contact-email' 
-            name='email' />
-          </label>
+            <!-- PHONE -->
+            <label class='input-block' for='contact-phone'>
+                <span class="input-heading">
+                  <span class="fas fa-phone"></span> Phone 
+                </span>
+                <input
+                value='570 616-5034'
+                required="required"
+                placeholder="e.g. (555) 555-5555"
+                type='tel' 
+                id='contact-phone' 
+                class='contact-phone' 
+                name='phone' />
+              </label>
 
-          <textarea
-          class="contact-blurb input-block"
-          placeholder="(Optional) ME EAT COOKIE. ME WANT MOAR COOOOOOOOKEEEEEE."
-          ></textarea>
-          
+            <!-- EMAIL -->
+            <label class='input-block' for='contact-email'>
+              <span class="input-heading">
+                <span class="fas fa-envelope"></span> Email 
+              </span>
+              <input 
+              value='jxa174@gmail.com'
+              required="required"
+              placeholder="e.g. address@gmail.com"
+              type='email' 
+              id='contact-email' 
+              class='contact-email' 
+              name='email' />
+            </label>
 
-          <button type='submit' class="submit-btn" > 
-            <span class="fas fa-paper-plane"></span> Send
-          </button>
-        </form>
-      </section>
+            <textarea
+            name='message'
+            class="contact-blurb input-block"
+            placeholder="(optional)"
+            >Hello!</textarea>
+            
 
-      <footer>
-        <div class="copyright">&copy; Ryan's Rim Repair 2018</div>
-        <div class="design-by">
-          Design by <a href="#" class="design-by-link">Bernard Technology Partners</a> 
-          & <a href='#' class="design-by-link">Max Bernard Web Design</a>
-        </div>
-      </footer>
+            <button type='submit' class="submit-btn" > 
+              <span class="fas fa-paper-plane"></span> Send
+            </button>
+          </form>
+        </section>
 
+        <footer>
+          <div class="copyright">&copy; Ryan's Rim Repair 2018</div>
+          <div class="design-by">
+            Design by <a href="#" class="design-by-link">Bernard Technology Partners</a> 
+            & <a href='#' class="design-by-link">Max Bernard Web Design</a>
+          </div>
+        </footer>
+      </div>
 
       <script src="js/ezee-gallery.min.js"></script>
+      <!-- Contact form -->
+      <script src='js/ajax-mailer.js'></script>
   </body>
 </html>

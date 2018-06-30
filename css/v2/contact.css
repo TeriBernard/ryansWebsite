@@ -58,6 +58,7 @@
 .contact-blurb {
     resize: vertical;
     min-height: 100px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .contact-form .submit-btn {
