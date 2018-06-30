@@ -27,25 +27,9 @@ function prepJsonWithDefaultFormat(formVals) {
     return dataWithFormats;
 }
 
-// Url to send form
-var url = './ezee-ajax-emailer/send-email.php'
-function handleContactForm(formVals, formElement) {
-    // Set loading spinner
-    // Get formats for each data name
-    var dataWithFormats = prepJsonWithDefaultFormat(formVals);
-    emailAjaxData(dataWithFormats)
-    .then(resData=>{
-        console.log(resData);
-    })
-    // Network failure  
-    .catch(e=>{
-        console.log(e.message);
-    })
-}
 
 function emailAjaxData(data){
     var JSONData = JSON.stringify(data);
-
     return fetch(url, {
         method: 'POST', 
         body: JSONData,

@@ -12,11 +12,7 @@
     <link rel="icon" type="image/png" href="img/header/favicon.png" />
 
     <!-- Custom minimal styles (consolidated all styles into 1 file) -->
-    <link href="css/v2/style.min.css" rel="stylesheet">
-
-    <!-- ezee-gallery-->
-    <link rel="stylesheet" href="css/v2/ezee-gallery.min.css" />
-    <link href="css/v2/ezee-gallery-mods.css" rel="stylesheet">
+    <link href="css/v2/_style.min.css" rel="stylesheet">
 
     <!-- FONTS (Raleway is only embedded as bold )-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:900|Roboto" rel="stylesheet">
@@ -73,81 +69,101 @@
     </section>
 
     <section id='contact'>
-        <h2 class="gallery-heading h-font">Feel free to contact me!</h2>
-        <p class='contact-invite'>If you need some rims repaired to a pristine, shiny finish(TODO CHANGE WORDING), feel free to contact me using the form below.</p>
-        <div>
-
-          <form onsubmit="handleContactForm" class="contact-form ezee-ajax-form">
-            <!-- TODO change placeholder text -->
-            <!-- NAME -->
-            <label class='input-block' for='contact-name'>
-              <span class="input-heading">
-                <span class="fas fa-user"></span> Name 
-              </span>
-              <input 
-              value='Maximus Prime'
-              placeholder="e.g. John Smith"
-              required="required"
-              type='text' 
-              id='contact-name'
-              class='contact-name' 
-              name='name' />
-            </label>
-
-            <!-- PHONE -->
-            <label class='input-block' for='contact-phone'>
-                <span class="input-heading">
-                  <span class="fas fa-phone"></span> Phone 
-                </span>
-                <input
-                value='570 616-5034'
-                required="required"
-                placeholder="e.g. (555) 555-5555"
-                type='tel' 
-                id='contact-phone' 
-                class='contact-phone' 
-                name='phone' />
-              </label>
-
-            <!-- EMAIL -->
-            <label class='input-block' for='contact-email'>
-              <span class="input-heading">
-                <span class="fas fa-envelope"></span> Email 
-              </span>
-              <input 
-              value='jxa174@gmail.com'
-              required="required"
-              placeholder="e.g. address@gmail.com"
-              type='email' 
-              id='contact-email' 
-              class='contact-email' 
-              name='email' />
-            </label>
-
-            <textarea
-            name='message'
-            class="contact-blurb input-block"
-            placeholder="(optional)"
-            >Hello!</textarea>
-            
-
-            <button type='submit' class="submit-btn" > 
-              <span class="fas fa-paper-plane"></span> Send
-            </button>
-          </form>
-        </section>
-
-        <footer>
-          <div class="copyright">&copy; Ryan's Rim Repair 2018</div>
-          <div class="design-by">
-            Design by <a href="#" class="design-by-link">Bernard Technology Partners</a> 
-            & <a href='#' class="design-by-link">Max Bernard Web Design</a>
-          </div>
-        </footer>
+      <div id='contact-status-loading' class="center-text fade-hide">
+        <span class="fas fa-spinner"></span>
       </div>
 
-      <script src="js/ezee-gallery.min.js"></script>
-      <!-- Contact form -->
-      <script src='js/ajax-mailer.js'></script>
+      <div id='contact-status-success' class='center-text fade-hide'>
+        <h3><span class='fas fa-check-square'></span> Thanks!</h3>
+        <h4> I'll get back to you as soon as I can.</h4>
+        <div id='sent-name' class="sent-info-result"></div>
+        <div id='sent-phone'class="sent-info-result"></div>
+        <div id='sent-email' class="sent-info-result"></div>
+      </div>
+
+      <div id='contact-status-success' class='center-text fade-hide'>
+        <span class='fas fa-fire'></span> Whoops! Something went wrong. Please check your info and try again. 
+      </div>
+
+      <div id='contact-form-block fade-reveal'>
+        <h2 class="gallery-heading h-font">Feel free to contact me!</h2>
+        <p class='contact-invite'>If you need some rims repaired to a pristine, shiny finish(TODO CHANGE WORDING), feel free to contact me using the form below.</p>
+
+        <form onsubmit="handleContactForm" class="contact-form ezee-ajax-form">
+          <!-- NAME -->
+          <label class='input-block' for='contact-name'>
+            <span class="input-heading">
+              <span class="fas fa-user"></span> Name 
+            </span>
+            <input 
+            value='Maximus Prime'
+            placeholder="e.g. John Smith"
+            required="required"
+            type='text' 
+            id='contact-name'
+            class='contact-name' 
+            name='name' />
+          </label>
+
+          <!-- PHONE -->
+          <label class='input-block' for='contact-phone'>
+              <span class="input-heading">
+                <span class="fas fa-phone"></span> Phone 
+              </span>
+              <input
+              value='570 616-5034'
+              required="required"
+              placeholder="e.g. (555) 555-5555"
+              type='tel' 
+              id='contact-phone' 
+              class='contact-phone' 
+              name='phone' />
+            </label>
+
+          <!-- EMAIL -->
+          <label class='input-block' for='contact-email'>
+            <span class="input-heading">
+              <span class="fas fa-envelope"></span> Email 
+            </span>
+            <input 
+            value='jxa174@gmail.com'
+            required="required"
+            placeholder="e.g. address@gmail.com"
+            type='email' 
+            id='contact-email' 
+            class='contact-email' 
+            name='email' />
+          </label>
+
+          <!-- MESSAGE -->
+          <textarea
+          name='message'
+          class="contact-blurb input-block"
+          placeholder="(optional)"
+          >Hello!</textarea>
+          
+
+          <button type='submit' class="submit-btn" > 
+            <span class="fas fa-paper-plane"></span> Send
+          </button>
+        </form>
+      </div> <!-- End contact form div-->
+
+      
+    </section>
+
+    <footer>
+      <div class="copyright">&copy; Ryan's Rim Repair 2018</div>
+        <div class="design-by">
+          Design by <a href="#" class="design-by-link">Bernard Technology Partners</a> 
+          & <a href='#' class="design-by-link">Max Bernard Web Design</a>
+        </div>
+    </footer>
+    
+
+    <script src="js/ezee-gallery.min.js"></script>
+    <!-- Contact form -->
+    <script src='js/ajax-mailer.js'></script>
+    <script src="js/handle-contact-form.js"></script>
   </body>
 </html>
