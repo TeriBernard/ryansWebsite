@@ -31,6 +31,7 @@ body {
     min-height: 50vh;
     /* Makes block take up full amount of available space, both stacked and in row. */
     flex-grow: 1;
+    padding: 2%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,7 +60,6 @@ header .logo-block {
     /* Removes this element from the mix so it's easier to center logo */
     position: absolute;
     text-align: center;
-    margin: 20px 0;
     align-self: flex-start;
     font-size: 1.3em;
     font-weight: bold;
@@ -89,6 +89,9 @@ header .description-block {
     flex-direction: column;
     padding: 2%;
     background-color: rgb(245,245,245);
+    background-image: url('../../img/background/gallery-back-light.png');
+    background-repeat: repeat;
+    background-size: 30px;
 }
 
 
