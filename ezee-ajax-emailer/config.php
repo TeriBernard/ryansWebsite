@@ -28,13 +28,15 @@ $ezee_email_send_to_config = [
 
 // (required)
 $ezee_email_value_options = [
-    // 'limit_to_required' => false, (defaults true)
-    // 'fail_on_value_overload' => false, (defaults true)
+    'limit_to_required' => false,
+    'fail_on_value_overload' => false, 
     // Using this without flags or required keys is not as safe
-    'required_values' => [
-        'name' => null,
-        'phone' => null,
-        'email' => null,
-        'message' => null,
-    ]
+    // 'required_values' => [
+    //     'name' => null,
+    //     'phone' => null,
+    //     'email' => null,
+    //     'message' => null,
+    // ]
+    // TODO 
+    // optional_values => []
 ];

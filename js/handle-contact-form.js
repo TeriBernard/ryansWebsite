@@ -39,17 +39,15 @@ function handleContactForm(formVals, formElement) {
                     resData.data.sanitized.email;
                 successElem.classList.add(fadeReveal);
             } else if(resData['status'] === 'fail'){
-                if(resData.data.failed){
+                if(resData.data && resData.data.failed){
                     var nameInput = document.getElementById('contact-name');
                     var phoneInput = document.getElementById('contact-phone');
                     var emailInput = document.getElementById('contact-email');
-                    var messageInput = document.getElementById('contact-message');
 
                     var failed = resData.data.failed;
                     setInvalid(failed['name'], nameInput);
                     setInvalid(failed['phone'], phoneInput);
-                    setInvalid(failed['email'], emailInput);
-                    setInvalid(failed['message'], messageInput);
+                    setInvalid(failed['email'], emailInput);                    
                 }
                 submitBtn.disabled = false;
                 formBlock.classList.add(fadeReveal);
@@ -71,7 +69,6 @@ function handleContactForm(formVals, formElement) {
 
 
 function setInvalid(failKey, inputElem){
-    console.log(failKey);
     var invalidClass = 'invalid-input'
     if(failKey) inputElem.classList.add(invalidClass);
     else inputElem.classList.remove(invalidClass);
