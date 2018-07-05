@@ -66,18 +66,32 @@
 
     </header>
 
+
     <!-- ================= 
         GALLERY
     ===================-->
     <section id='gallery'>
-      
+        <h3 class="heading h-font">Examples</h3>
+        <p class='instructions'>Hover or click the arrow to see the transformation!</p>
+        <div class="gallery-wrapper">
+          <!-- ====== Rim one ======-->
+          <div class="ezee-image-switcher">
+            <img src='./img/rims/rim.1.before.jpg'/> <!-- Shown first -->
+            <img src='./img/rims/rim.1.after.jpg'/> <!-- Shown on hover-->
+          </div>
 
-      <div class="ezee-gallery">
-        <img src='img/rims/rim.1.jpg' alt='A before and after rim shot'/>
-        <img src='img/rims/rim.1.jpg' alt='A before and after rim shot'/>
-        <img src='img/rims/rim.1.jpg' alt='A before and after rim shot'/>
-        <img src='img/rims/rim.1.jpg' alt='A before and after rim shot'/>
-      </div>
+          <!-- ====== Rim two ======-->
+          <div class="ezee-image-switcher">
+            <img src='./img/rims/rim.2.before.jpg'/> <!-- Shown first -->
+            <img src='./img/rims/rim.2.after.jpg'/> <!-- Shown on hover-->
+          </div>
+
+          <!-- ====== Rim three ======-->
+          <div class="ezee-image-switcher">
+            <img src='./img/rims/rim.3.before.jpg'/> <!-- Shown first -->
+            <img src='./img/rims/rim.3.after.jpg'/> <!-- Shown on hover-->
+          </div>
+        </div>
     </section>
 
 
@@ -218,7 +232,7 @@
     </footer>
     
 
-    <script src="js/ezee-gallery.min.js"></script>
+    <script src="js/ezee-image-switcher.js"></script>
     <!-- Contact form -->
     <script src='js/ajax-mailer.js'></script>
     <script src="js/handle-contact-form.js"></script>

@@ -3,8 +3,7 @@
     /* Fallback for no vh */
     min-height: 900px;
     min-height: 50vh;
-    margin-top: 20px;
-    padding: 40px 0 20px;
+    padding: 10vh 0 20px;
     position: relative;
 }
 

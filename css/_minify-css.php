@@ -5,8 +5,7 @@ $output_filename = '_style.min.css';
 // Have to use an array to keep the order consistent
 $css_file_names = [
     'minimal.css',
-    'ezee-gallery-mods.css',
-    'ezee-gallery.min.css',
+    'gallery.css',
     'contact.css',
     'footer.css'
 ];
