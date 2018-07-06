@@ -27,7 +27,7 @@
 .e-i-s {
     position: relative;
     width: 99vw;
-    height: 64vw;
+    height: 66vw;
     max-width: 900px;
     max-height: 600px;
     overflow: hidden;
@@ -46,13 +46,17 @@
     display: block;
     position: absolute;
     top: 0;
-    width: 150%;
+    left: 0;
+    min-width: 100px;
+    width: 21%;
     height: 100%;
-    left: -127%;
+    
     transition: all .3s ease 0s;
     z-index: 150;
     transform: skewX(-45deg);
     transform-origin: top left;
+
+    background-color: rgba(0,0,0,0);
 
 }
 
@@ -115,8 +119,7 @@ switch is triggered on hover */
 
 /* Effects */
 .e-i-s .switch-trigger:hover {
-    left: -6% !important;
-    background-color: rgba(0,0,0,0) !important;
+    width: 131% !important;
 }
 
 .e-i-s .switch-trigger:hover ~ .arrow-back.trigger {
