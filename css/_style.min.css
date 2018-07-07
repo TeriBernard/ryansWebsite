@@ -48,12 +48,14 @@ header.above-fold {
     flex-direction: row;
     /* Also important. If blocks aren't stacking, this isn't set to wrap so flexbox is forcing them into rows. */
     flex-wrap: wrap;
+    background-image: url('../../img/header/working.jpg');
+    background-size: cover;
 }
 
 
 /* ABOVE FOLD LOGO BLOCK */
 header .logo-block {
-    background-color: rgb(245,231,217);
+    background-color: rgba(245,231,217,.8);
 }
 
 .above-fold-phone {
@@ -88,8 +90,8 @@ Using 'max-*' instead of explicit percentages keeps ratio correct. */
 header .description-block {
     flex-direction: column;
     padding: 2%;
-    background-color: rgb(245,245,245);
-    background-image: url('../img/background/gallery-back-light.png');
+    background-color: rgba(250,250,250,.9);
+    background-image: url('../../img/background/gallery-back-light.png');
     background-repeat: repeat;
     background-size: 30px;
 }
