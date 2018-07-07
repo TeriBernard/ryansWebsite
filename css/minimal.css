@@ -14,7 +14,6 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     overflow-x: hidden;  /* makes scroll bar go away on Windows */
-    overflow-y: hidden;  /* makes scroll bar go away on Windows */
 }
 
 /*  Can add this class to an element to change font.
