@@ -1,10 +1,10 @@
+/* **************** 
+    GALLERY
+****************** */
+
 #gallery{
     padding: 50px 0;
-    background-color: rgb(239, 208, 179);
     text-align: center;
-}
-#gallery .heading { 
-    color: rgb(116, 56, 56);
 }
 #gallery .instructions {
     margin: 25px;

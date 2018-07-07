@@ -1,5 +1,4 @@
 #contact {
-    background-color: rgb(239, 208, 179);
     /* Fallback for no vh */
     min-height: 900px;
     min-height: 50vh;
@@ -7,11 +6,10 @@
     position: relative;
 }
 
-.gallery-heading {
+.contact-heading {
     width: 95%;
     text-align: center;
     margin: auto;
-    color: rgb(107, 30, 30);
 }
 
 .contact-invite {
@@ -46,7 +44,6 @@
 }
 .input-heading {
     font-size: .9rem;
-    color: #65240a;
     min-width: 70px;
     text-align: left;
 }
@@ -107,7 +104,6 @@
     font-size: 20px;
     right: 0px;
     align-self: flex-end;
-    background-color: rgba(107, 30, 30, .8);
     cursor: pointer;
 }
 .contact-form .submit-btn:hover{

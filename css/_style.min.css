@@ -1,3 +1,7 @@
+/* **************** 
+    BASE / GENERAL
+****************** */
+
 /* 
     Resets and normalizes styles across browsers to make design consistent.
     It's minimal but bare in mind this sets css on every single element individually(not cascading),
@@ -13,22 +17,50 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    overflow-x: hidden;  /* makes scroll bar go away on Windows */
+    overflow-x: hidden;  /* makes Horizontal scroll bar go away on Windows */
+}
+/* **************** 
+    COLORS
+****************** */
+/* 
+    It's easiest for me to preface a color with
+        bg-(color name)
+        border-(color name)
+        text-(color name)
+
+But it does bloat the file if the color isn't needed for all three,
+so I try to only add what I need.
+*/
+
+/* matches logo color */
+.text-logo-red {
+    color: rgb(147, 56, 50);
+}
+.bg-logo-red {
+    background-color: rgb(147, 56, 50);
+}
+.border-logo-red {
+    border-color: rgb(147, 56, 50);
 }
 
+
+/* Background color of gallery and contact */
+.bg-cream {
+    background-color: rgb(239, 208, 179);
+}
 /*  Can add this class to an element to change font.
-    Didn't name it after the font itself in case the font is changed. 
-    The 'h' is for 'heading'. */
+Didn't name it after the font itself in case the font is changed. 
+The 'h' is for 'heading'. */
 .h-font {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-}
-
-/* **************** ABOVE FOLD **** */
+}/* **************** 
+    ABOVE FOLD / LANDING
+****************** */
 
 /* This is why I love flex-box. I don't even need media queries for this:
  These main blocks are side-by-side when able, otherwise(i.e. small screens) they stack. */
-.above-fold-block {
+ .above-fold-block {
     min-height: 50vh;
     /* Makes block take up full amount of available space, both stacked and in row. */
     flex-grow: 1;
@@ -51,7 +83,6 @@ header.above-fold {
     flex-wrap: wrap;
 }
 
-
 /* ABOVE FOLD LOGO BLOCK */
 header .logo-block {
     background-color: rgb(245,231,217);
@@ -67,7 +98,7 @@ header .logo-block {
     align-self: flex-start;
     font-size: 1.3em;
     font-weight: bold;
-    color: rgb(116, 56, 56);
+    text-shadow: 1px 1px 1px rgba(255,255,255,1);
 }
 
 /* Personal preference, I think it's easier to work with images when they're wrapped. */
@@ -111,17 +142,17 @@ header .description-block {
     margin: 1px 0;
     padding: 5px;
     text-decoration: none;
-    border-bottom: 1px solid rgb(175, 42, 42);
-    color: rgb(175, 42, 42);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
     text-shadow: 0px 0px 1px rgba(0,0,0,.3);
-    box-shadow: 0 6px 8px -6px rgb(175, 42, 42);
+    box-shadow: 0 6px 8px -6px rgba(70, 70, 70, 0.7);
 }
 /* Effects are cool, but also add a ton for the 'feel' of the site.
 Just gotta keep 'em snappy. */
 .nav-item:hover {
     transition: text-shadow .1s, box-shadow .1s;
     text-shadow: 0px 0px 1px rgba(0,0,0,.5);
-    box-shadow: 0 7px 8px -6px rgb(129, 55, 40, 1);
+    box-shadow: 0 7px 8px -6px rgba(129, 55, 40, 1);
 }
 
 /*  DESCRIPTION BLOCK TEXT */
@@ -136,20 +167,13 @@ Just gotta keep 'em snappy. */
 }
 .description-block .description-text-wrapper p {
     margin-top: 20px;
-}
+}/* **************** 
+    GALLERY
+****************** */
 
-
-
-
-/* **** GALLERY **** */
-
-/* **** CONTACT **** */#gallery{
+#gallery{
     padding: 50px 0;
-    background-color: rgb(239, 208, 179);
     text-align: center;
-}
-#gallery .heading { 
-    color: rgb(116, 56, 56);
 }
 #gallery .instructions {
     margin: 25px;
@@ -295,7 +319,6 @@ switch is triggered on hover */
     z-index: 17 !important;
 }
 #contact {
-    background-color: rgb(239, 208, 179);
     /* Fallback for no vh */
     min-height: 900px;
     min-height: 50vh;
@@ -303,11 +326,10 @@ switch is triggered on hover */
     position: relative;
 }
 
-.gallery-heading {
+.contact-heading {
     width: 95%;
     text-align: center;
     margin: auto;
-    color: rgb(107, 30, 30);
 }
 
 .contact-invite {
@@ -342,7 +364,6 @@ switch is triggered on hover */
 }
 .input-heading {
     font-size: .9rem;
-    color: #65240a;
     min-width: 70px;
     text-align: left;
 }
@@ -403,7 +424,6 @@ switch is triggered on hover */
     font-size: 20px;
     right: 0px;
     align-self: flex-end;
-    background-color: rgba(107, 30, 30, .8);
     cursor: pointer;
 }
 .contact-form .submit-btn:hover{
@@ -431,7 +451,6 @@ switch is triggered on hover */
 }
 
 footer {
-    background-color: rgb(239, 208, 179);
     text-align: center;
     font-size: 15px;
     color: rgb(100,100,100);
@@ -441,8 +460,4 @@ footer {
 
 footer .design-by {
     margin-top: 15px;
-}
-
-footer .design-by-link {
-    color: #ad685d;
 }
