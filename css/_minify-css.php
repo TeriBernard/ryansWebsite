@@ -3,12 +3,16 @@
 $output_filename = '_style.min.css';
 
 // Have to use an array to keep the order consistent
+// the css will cascade from top to bottom, just like if added to index.html
 $css_file_names = [
-    'minimal.css',
-    'ezee-gallery-mods.css',
-    'ezee-gallery.min.css',
-    'contact.css',
-    'footer.css'
+    'general/base.css',
+    'general/colors.css',
+    'general/fonts.css',
+    
+    'sections/above-fold.css',
+    'sections/gallery.css',
+    'sections/contact.css',
+    'sections/footer.css'
 ];
 
 // Holds final css

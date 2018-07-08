@@ -1,33 +1,10 @@
-/* 
-    Resets and normalizes styles across browsers to make design consistent.
-    It's minimal but bare in mind this sets css on every single element individually(not cascading),
-    so only use this when absolutely needed because it does affect display times.
-*/
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* In contrast to '*', this will cascade to lower elements. */
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-}
-
-/*  Can add this class to an element to change font.
-    Didn't name it after the font itself in case the font is changed. 
-    The 'h' is for 'heading'. */
-.h-font {
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-}
-
-/* **************** ABOVE FOLD **** */
+/* **************** 
+    ABOVE FOLD / LANDING
+****************** */
 
 /* This is why I love flex-box. I don't even need media queries for this:
  These main blocks are side-by-side when able, otherwise(i.e. small screens) they stack. */
-.above-fold-block {
+ .above-fold-block {
     min-height: 50vh;
     /* Makes block take up full amount of available space, both stacked and in row. */
     flex-grow: 1;
@@ -50,10 +27,12 @@ header.above-fold {
     flex-wrap: wrap;
 }
 
-
 /* ABOVE FOLD LOGO BLOCK */
 header .logo-block {
     background-color: rgb(245,231,217);
+    background: linear-gradient(rgba(245,231,217,.8), rgba(245,231,217,0.8)), url('../img/header/working.jpg');
+    background-size: cover;
+    background-position-x: 22%;
 }
 
 .above-fold-phone {
@@ -63,7 +42,7 @@ header .logo-block {
     align-self: flex-start;
     font-size: 1.3em;
     font-weight: bold;
-    color: rgb(116, 56, 56);
+    text-shadow: 1px 1px 1px rgba(255,255,255,1);
 }
 
 /* Personal preference, I think it's easier to work with images when they're wrapped. */
@@ -88,8 +67,8 @@ Using 'max-*' instead of explicit percentages keeps ratio correct. */
 header .description-block {
     flex-direction: column;
     padding: 2%;
-    background-color: rgb(245,245,245);
-    background-image: url('../../img/background/gallery-back-light.png');
+    background-color: rgba(250,250,250,.9);
+    background-image: url('../img/background/gallery-back.png');
     background-repeat: repeat;
     background-size: 30px;
 }
@@ -107,17 +86,17 @@ header .description-block {
     margin: 1px 0;
     padding: 5px;
     text-decoration: none;
-    border-bottom: 1px solid rgb(175, 42, 42);
-    color: rgb(175, 42, 42);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
     text-shadow: 0px 0px 1px rgba(0,0,0,.3);
-    box-shadow: 0 6px 8px -6px rgb(175, 42, 42);
+    box-shadow: 0 6px 8px -6px rgba(70, 70, 70, 0.7);
 }
 /* Effects are cool, but also add a ton for the 'feel' of the site.
 Just gotta keep 'em snappy. */
 .nav-item:hover {
     transition: text-shadow .1s, box-shadow .1s;
     text-shadow: 0px 0px 1px rgba(0,0,0,.5);
-    box-shadow: 0 7px 8px -6px rgb(129, 55, 40, 1);
+    box-shadow: 0 7px 8px -6px rgba(129, 55, 40, 1);
 }
 
 /*  DESCRIPTION BLOCK TEXT */
@@ -133,10 +112,3 @@ Just gotta keep 'em snappy. */
 .description-block .description-text-wrapper p {
     margin-top: 20px;
 }
-
-
-
-
-/* **** GALLERY **** */
-
-/* **** CONTACT **** */

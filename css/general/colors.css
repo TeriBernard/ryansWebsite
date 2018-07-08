@@ -1,0 +1,29 @@
+/* **************** 
+    COLORS
+****************** */
+/* 
+    It's easiest for me to preface a color with
+        bg-(color name)
+        border-(color name)
+        text-(color name)
+
+But it does bloat the file if the color isn't needed for all three,
+so I try to only add what I need.
+*/
+
+/* matches logo color */
+.text-logo-red {
+    color: rgb(147, 56, 50);
+}
+.bg-logo-red {
+    background-color: rgb(147, 56, 50);
+}
+.border-logo-red {
+    border-color: rgb(147, 56, 50);
+}
+
+
+/* Background color of gallery and contact */
+.bg-cream {
+    background-color: rgb(239, 208, 179);
+}

@@ -1,0 +1,8 @@
+
+/*  Can add this class to an element to change font.
+Didn't name it after the font itself in case the font is changed. 
+The 'h' is for 'heading'. */
+.h-font {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}

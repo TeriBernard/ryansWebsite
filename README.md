@@ -1,4 +1,4 @@
 # ryansWebsite
-simple website being built by customizing the album example from bootstrap4
+Custom website brought to you by BernardTechPartners.com
 
 

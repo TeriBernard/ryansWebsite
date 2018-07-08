@@ -1,0 +1,21 @@
+/* **************** 
+    BASE / GENERAL
+****************** */
+
+/* 
+    Resets and normalizes styles across browsers to make design consistent.
+    It's minimal but bare in mind this sets css on every single element individually(not cascading),
+    so only use this when absolutely needed because it does affect display times.
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* In contrast to '*', this will cascade to lower elements. */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;  /* makes Horizontal scroll bar go away on Windows */
+}

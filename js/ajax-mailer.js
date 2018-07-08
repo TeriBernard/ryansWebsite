@@ -38,7 +38,5 @@ function emailAjaxData(data){
         }
     })
     // Return json server response
-    .then( res=>{
-        return res.json();
-    })
+    .then( res=>res.json() )
 }
