@@ -3,14 +3,36 @@
 ****************** */
 
 #gallery{
-    padding: 50px 0;
+    padding: 6vh 0;
     text-align: center;
 }
+.gallery-head-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+.gallery-heading {
+    font-size: 16vw;
+    color: rgb(255,255,255);
+}
+@media screen and (min-width: 460px) {
+    .gallery-heading {
+        font-size: 73px;
+    }
+}
+
 #gallery .instructions {
-    margin: 25px;
+    margin-top: 20px;
+    margin-left: 40px;
+
+    color: rgb(255,255,255);
 } 
 
 .gallery-wrapper {
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -36,8 +58,8 @@
 }
 @media screen and (min-width: 1400px){
     .e-i-s {
-        width: 32vw;
-        height: 22vw;
+        width: 49vw;
+        height: 32.8vw;
     }
 }
 

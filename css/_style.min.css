@@ -11,6 +11,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* In contrast to '*', this will cascade to lower elements. */
@@ -32,7 +34,7 @@ But it does bloat the file if the color isn't needed for all three,
 so I try to only add what I need.
 */
 
-/* matches logo color */
+/* matches logo color. Leveing for now, but probably don't need. */
 .text-logo-red {
     color: rgb(147, 56, 50);
 }
@@ -44,10 +46,39 @@ so I try to only add what I need.
 }
 
 
-/* Background color of gallery and contact */
-.bg-cream {
-    background-color: rgb(239, 208, 179);
+/* Primary color(started as red) */
+.text-primary{
+    color: rgb(108, 59, 58);
 }
+.bg-primary {
+    background-color: rgb(108, 59, 58);
+}
+.border-primary {
+    border-color: rgb(108, 59, 58);
+}
+
+/* Secondary color(gallery background, 'contact' heading color, ...etc) */
+.text-secondary{
+    color: rgb(45,45,45);
+}
+.bg-secondary {
+    background-color: rgb(45,45,45);
+}
+.border-secondary {
+    border-color: rgb(45,45,45);
+}
+
+/* Third...ary color(contact background) */
+.text-tertiary{
+    color: rgb(240,240,240);
+}
+.bg-tertiary {
+    background-color: rgb(240,240,240);
+}
+.border-tertiary {
+    border-color: rgb(240,240,240);
+}
+
 /*  Can add this class to an element to change font.
 Didn't name it after the font itself in case the font is changed. 
 The 'h' is for 'heading'. */
@@ -61,6 +92,7 @@ The 'h' is for 'heading'. */
 /* This is why I love flex-box. I don't even need media queries for this:
  These main blocks are side-by-side when able, otherwise(i.e. small screens) they stack. */
  .above-fold-block {
+    position: relative;
     min-height: 50vh;
     /* Makes block take up full amount of available space, both stacked and in row. */
     flex-grow: 1;
@@ -81,24 +113,19 @@ header.above-fold {
     flex-direction: row;
     /* Also important. If blocks aren't stacking, this isn't set to wrap so flexbox is forcing them into rows. */
     flex-wrap: wrap;
-}
 
-/* ABOVE FOLD LOGO BLOCK */
-header .logo-block {
     background-color: rgb(245,231,217);
     background: linear-gradient(rgba(245,231,217,.8), rgba(245,231,217,0.8)), url('../img/header/working.jpg');
     background-size: cover;
     background-position-x: 22%;
 }
 
-.above-fold-phone {
-    /* Removes this element from the mix so it's easier to center logo */
-    position: absolute;
-    text-align: center;
-    align-self: flex-start;
-    font-size: 1.3em;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(255,255,255,1);
+/* ABOVE FOLD LOGO BLOCK */
+header .logo-block {
+
+    /* background: linear-gradient(rgba(245,231,217,.8), rgba(245,231,217,0.8)), url('../img/header/working.jpg');
+    background-size: cover;
+    background-position-x: 22%; */
 }
 
 /* Personal preference, I think it's easier to work with images when they're wrapped. */
@@ -110,6 +137,7 @@ header .logo-block {
     max-width: 700px;
     max-width: 68vh;
     margin: auto;
+    padding: 10vh 0 0;
 }
 /* Restricts image to not be larger than wrapper. 
 Using 'max-*' instead of explicit percentages keeps ratio correct. */
@@ -122,30 +150,42 @@ Using 'max-*' instead of explicit percentages keeps ratio correct. */
 /* ABOVE FOLD DESCRIPTION BLOCK */
 header .description-block {
     flex-direction: column;
-    padding: 2%;
-    background-color: rgba(250,250,250,.9);
-    background-image: url('../img/background/gallery-back.png');
+    padding: 10vh 2% 4%;
+    background-color: rgba(250,250,250,.8);
+    /* background-image: url('../img/background/gallery-back.png');
     background-repeat: repeat;
-    background-size: 30px;
+    background-size: 30px; */
 }
 
+/* Sections that make up the top header bar */
+.head-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255,255,255);
+}
+.head-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
 
 /*  DESCRIPTION BLOCK NAV */
-.main-nav {
-    margin-bottom: auto;
-    display: flex;
-    width: 95%;
-    justify-content: space-between;
-    max-width: 300px;
-}
 .nav-item {
-    margin: 1px 0;
+    margin-left:  20px;
+    margin-right: 20px;
     padding: 5px;
     text-decoration: none;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     text-shadow: 0px 0px 1px rgba(0,0,0,.3);
     box-shadow: 0 6px 8px -6px rgba(70, 70, 70, 0.7);
+    font-size: 18px;
 }
 /* Effects are cool, but also add a ton for the 'feel' of the site.
 Just gotta keep 'em snappy. */
@@ -163,7 +203,7 @@ Just gotta keep 'em snappy. */
     margin-bottom: auto;
 }
 .description-text-wrapper .description-heading {
-    font-size: 1.5em;
+    font-size: 4em;
 }
 .description-block .description-text-wrapper p {
     margin-top: 20px;
@@ -172,14 +212,36 @@ Just gotta keep 'em snappy. */
 ****************** */
 
 #gallery{
-    padding: 50px 0;
+    padding: 6vh 0;
     text-align: center;
 }
+.gallery-head-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+.gallery-heading {
+    font-size: 16vw;
+    color: rgb(255,255,255);
+}
+@media screen and (min-width: 460px) {
+    .gallery-heading {
+        font-size: 73px;
+    }
+}
+
 #gallery .instructions {
-    margin: 25px;
+    margin-top: 20px;
+    margin-left: 40px;
+
+    color: rgb(255,255,255);
 } 
 
 .gallery-wrapper {
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -205,8 +267,8 @@ Just gotta keep 'em snappy. */
 }
 @media screen and (min-width: 1400px){
     .e-i-s {
-        width: 32vw;
-        height: 22vw;
+        width: 49vw;
+        height: 32.8vw;
     }
 }
 
@@ -322,20 +384,25 @@ switch is triggered on hover */
     /* Fallback for no vh */
     min-height: 900px;
     min-height: 50vh;
-    padding: 10vh 0 20px;
+    padding: 6vh 0;
     position: relative;
 }
 
 .contact-heading {
-    width: 95%;
+    font-size: 14.5vw;
     text-align: center;
-    margin: auto;
+}
+@media screen and (min-width: 460px){
+    .contact-heading {
+        font-size: 73px;
+    }
 }
 
-.contact-invite {
+.contact-invite-text {
     width: 87%;
-    margin: 15px auto 0px;
-    max-width: 600px;
+    font-size: 22px;
+    margin: 5px auto; 
+    max-width: 400px;
 }
 
 .contact-form {
@@ -459,5 +526,8 @@ footer {
 }
 
 footer .design-by {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-top: 15px;
 }

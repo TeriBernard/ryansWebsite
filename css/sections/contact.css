@@ -2,20 +2,25 @@
     /* Fallback for no vh */
     min-height: 900px;
     min-height: 50vh;
-    padding: 10vh 0 20px;
+    padding: 6vh 0;
     position: relative;
 }
 
 .contact-heading {
-    width: 95%;
+    font-size: 14.5vw;
     text-align: center;
-    margin: auto;
+}
+@media screen and (min-width: 460px){
+    .contact-heading {
+        font-size: 73px;
+    }
 }
 
-.contact-invite {
+.contact-invite-text {
     width: 87%;
-    margin: 15px auto 0px;
-    max-width: 600px;
+    font-size: 22px;
+    margin: 5px auto; 
+    max-width: 400px;
 }
 
 .contact-form {
