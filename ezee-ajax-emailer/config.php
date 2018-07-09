@@ -1,5 +1,5 @@
 <?php 
-// Separate fiel for actual login info, or just hardcode below
+// Separate field for actual login info, or just hardcode below
 require('email_login.php');
 
 global $ezee_email_vals;
@@ -11,7 +11,7 @@ $ezee_email_send_from_config = [
     'encryption_type' => 'tls', // (optional) 'ssl' or 'tls' 
     'port' => 587, 
     'server' => 'smtp.gmail.com', // Can also take secondary server separated by a comma
-    'email' => [$my_secret_email, 'Ryan\s Rim Restoration'],
+    'email' => [$my_secret_email, 'Ryan\'s Rim Restoration'],
     'password' => $my_secret_pass // Password for address server
 ];
 
@@ -20,7 +20,7 @@ $ezee_email_send_to_config = [
     // If you want to send a 'name' when you have only one recipient,
     // this still needs to be an array of arrays
     'addresses' => [
-        [$my_secret_email, 'Ryan\s Rim Restoration'],
+        [$my_secret_email, 'Ryan\'s Rim Restoration'],
     ],
     'subject' => "Contact from $name",
     'reply_to' => [$email, $name]
