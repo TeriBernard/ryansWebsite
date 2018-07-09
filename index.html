@@ -28,17 +28,20 @@
     ===================-->
     <header class="above-fold">
       <!-- ABOVE FOLD LOGO & NUMBER -->
-      <div class="logo-block above-fold-block">
-        <div class='head-bar '>
-          <a href='tel:+1-614-620-3350' class="above-fold-phone h-font text-primary">
-              <span class="fas fa-phone"></span> (614) 620-3350
-          </a>
+      
+        <div class="logo-block above-fold-block">
+
+          <div class='head-bar '>
+            <a href='tel:+1-614-620-3350' class="above-fold-phone h-font text-primary">
+                <span class="fas fa-phone"></span> (614) 620-3350
+            </a>
+          </div>
+      
+          <div class='logo-img-wrapper'>
+            <img src='img/header/logo.png' alt="Ryan's Rim Repair Logo"/>
+          </div>
+
         </div>
-    
-        <div class='logo-img-wrapper'>
-          <img src='img/header/logo.png' alt="Ryan's Rim Repair Logo"/>
-        </div>
-      </div>
 
 
       <!-- ABOVE FOLD DESCRIPTION -->
@@ -74,7 +77,7 @@
     ===================-->
     <section id='gallery' class='bg-secondary'>
         <div class='gallery-head-wrap'>
-          <h2 style='color: rgb(255,255,255);'class="gallery-heading h-font">
+          <h2 style='color: rgb(255,255,255);' class="gallery-heading h-font">
               <span class="fas fa-th"></span> GALLERY
           </h2>
           <p class='instructions'>Hover or click the arrow to see the transformation!</p>
@@ -122,7 +125,7 @@
 
       <!-- ====== Form UX feedback ======-->
       <div id='contact-status-loading' class="center-text fade-base text-primary">
-          <span class="fas fa-cog fa-spin fa-3x fa-fw"></span>
+          <span style='margin-top: 1%; margin-bottom: 1%;' class="fas fa-cog fa-spin fa-3x fa-fw"></span>
       </div>
 
       <div id='contact-status-success' class='center-text fade-base email-status-block'>
@@ -132,7 +135,7 @@
           <p style='margin-top: 5px;'><b>Here's what I got:</b></p>
           <div style="margin: 15px auto;">
               <div id='sent-name' class="sent-info-result"></div>
-              <div id='sent-phone'class="sent-info-result"></div>
+              <div id='sent-phone' class="sent-info-result"></div>
               <div id='sent-email' class="sent-info-result"></div>
           </div>
           <p class='text-primary'>
@@ -249,7 +252,7 @@
         target='_blank' 
         rel="noopener noreferrer"
         class="design-by-link text-tertiary">
-          Hosted by Bernard Technology Partners</a> 
+          Hosted by Bernard Technology Partners
         </a>
         <a href='https://maxbernard.design' 
         target='_blank' 
@@ -263,6 +266,10 @@
     
 
     <script src="js/ezee-image-switcher.js"></script>
+    <!-- Polyfills -->
+    <script src="js/fetch.js"></script>
+    <script src="js/promise.js"></script>
+
     <!-- Contact form -->
     <script src='js/ajax-mailer.js'></script>
     <script src="js/handle-contact-form.js"></script>

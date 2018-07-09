@@ -2,19 +2,6 @@
     ABOVE FOLD / LANDING
 ****************** */
 
-/* This is why I love flex-box. I don't even need media queries for this:
- These main blocks are side-by-side when able, otherwise(i.e. small screens) they stack. */
- .above-fold-block {
-    position: relative;
-    min-height: 50vh;
-    /* Makes block take up full amount of available space, both stacked and in row. */
-    flex-grow: 1;
-    padding: 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 header.above-fold {
     min-height: 100vh;
     width: 100%;
@@ -33,9 +20,31 @@ header.above-fold {
     background-position-x: 22%;
 }
 
+/* This is why I love flex-box. I don't even need media queries for this:
+ These main blocks are side-by-side when able, otherwise(i.e. small screens) they stack. */
+ .above-fold-block {
+    position: relative;
+    /* min-height: 49vh; */
+    /* Makes block take up full amount of available space, both stacked and in row. */
+    flex-grow: 1;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 49vw;
+}
+/* For stupid Internet Explorer */
+@media screen and (min-width: 1220px) {
+    .above-fold-block {
+        min-height: 100vh;
+        width: 49vw;
+    }
+}
+
+
 /* ABOVE FOLD LOGO BLOCK */
 header .logo-block {
-
     /* background: linear-gradient(rgba(245,231,217,.8), rgba(245,231,217,0.8)), url('../img/header/working.jpg');
     background-size: cover;
     background-position-x: 22%; */
@@ -49,7 +58,6 @@ header .logo-block {
     */
     max-width: 700px;
     max-width: 68vh;
-    margin: auto;
     padding: 10vh 0 0;
 }
 /* Restricts image to not be larger than wrapper. 
@@ -73,8 +81,9 @@ header .description-block {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 9vh;
+    height: 9vh;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgb(255,255,255);
@@ -109,8 +118,6 @@ Just gotta keep 'em snappy. */
 .description-block .description-text-wrapper{
     width: 90%;
     max-width: 500px;
-    margin-top: auto;
-    margin-bottom: auto;
     padding-bottom: 4vh;
 }
 .description-text-wrapper .description-heading {
