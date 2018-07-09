@@ -112,16 +112,73 @@
         CONTACT
     ===================-->
     <section id='contact' class='bg-tertiary'>
-      <h2 class='h-font contact-heading text-secondary'>
-          <span class="fas fa-envelope"></span> CONTACT
-      </h2>
+      <!-- === Visible first ===  -->
+      <div id='form-invite-text' class="fade-base fade-reveal email-status-block">
+        <h2 class='h-font contact-heading text-secondary'>
+            <span class="fas fa-envelope"></span> CONTACT
+        </h2>
+        <p style='margin: 5px auto; max-width: 400px;' class="contact-invite-text text-primary">Need rims restored?</p>
+      </div>
+
+      <!-- ====== Form UX feedback ======-->
+      <div id='contact-status-loading' class="center-text fade-base text-primary">
+          <span class="fas fa-cog fa-spin fa-3x fa-fw"></span>
+      </div>
+
+      <div id='contact-status-success' class='center-text fade-base email-status-block'>
+          <h3 class="text-primary"> 
+              <span class='fas fa-check-square text-primary'></span> Thanks!
+          </h3>
+          <p style='margin-top: 5px;'><b>Here's what I got:</b></p>
+          <div style="margin: 15px auto;">
+              <div id='sent-name' class="sent-info-result"></div>
+              <div id='sent-phone'class="sent-info-result"></div>
+              <div id='sent-email' class="sent-info-result"></div>
+          </div>
+          <p class='text-primary'>
+              <b>I'll get back to you as soon as I can.</b>
+          </p>
+      </div>
+
+      <div id='contact-status-fail' class='center-text fade-base email-status-block'>
+          <h3 class='text-primary'> 
+              <span class='fas fa-fire'></span> Whoops! 
+          </h3>
+          <p style='margin: 5px auto; width: 90%;' class="center-text"> 
+              Something went wrong. Please check your info and try again. 
+          </p>
+      </div>
+
+      <div id='contact-status-error' class='center-text fade-base email-status-block'>
+          <h3 class='text-primary'> 
+            <span class='fas fa-times'></span> Something broke.
+          </h3> 
+          <p>That's not good. Feel free to contact me directly at:</p>
+          <p style='margin: 10px auto;'>
+              <a 
+              rel="noreferrer"
+              target='_blank' 
+              href='mailto:Ryan@ryansrimrepair.com' 
+              style='font-size: 16px;' class='text-secondary'>
+                  Ryan@RyansRimRepair.com
+              </a>
+          </p>
+          <p style='margin: 10px auto;'>
+              <a 
+              rel="noreferrer"
+              target='_blank' 
+              href='tel:+16146203350' 
+              style='font-size: 16px;' class='text-secondary'>
+                  (614) 620-3350
+              </a>
+          </p>
+      </div>
+      <!-- ====== END Form UX feedback ======-->
 
       <!-- ====== Contact form ======-->
       <div id='contact-form-block' class="fade-base fade-reveal">
-
-        <div class="fade-base fade-reveal email-status-block">
-          <p style='margin: 5px auto; max-width: 400px;' class="contact-invite-text text-primary">Need rims restored?</p>
-        </div>
+        
+        
 
         <form id='contact-form' onsubmit="handleContactForm" class="contact-form ezee-ajax-form">
           <!-- NAME -->
@@ -179,63 +236,8 @@
             <span class="fas fa-paper-plane"></span> Send
           </button>
         </form>
-      </div> <!-- End contact form div-->
-
-
-      <!-- ====== Form UX feedback ======-->
-      <div id='contact-status-loading' class="center-text fade-base text-primary">
-          <span class="fas fa-cog fa-spin fa-3x fa-fw"></span>
-        </div>
-  
-        <div id='contact-status-success' class='center-text fade-base email-status-block'>
-          <h3 class="text-primary"> 
-            <span class='fas fa-check-square text-primary'></span> Thanks!
-          </h3>
-          <p style='margin-top: 5px;'><b>Here's what I got:</b></p>
-          <div style="margin: 15px auto;">
-            <div id='sent-name' class="sent-info-result"></div>
-            <div id='sent-phone'class="sent-info-result"></div>
-            <div id='sent-email' class="sent-info-result"></div>
-          </div>
-          <p class='text-primary'>
-            <b>I'll get back to you as soon as I can.</b>
-          </p>
-        </div>
-  
-        <div 
-        id='contact-status-fail' 
-        class='center-text fade-base email-status-block'>
-          <h3 class='text-primary'> 
-            <span class='fas fa-fire'></span> Whoops! 
-          </h3>
-          <p style='margin: 5px auto; width: 90%;' class="center-text"> Something went wrong. Please check your info and try again. </p>
-        </div>
-  
-        <div id='contact-status-error' class='center-text fade-base email-status-block'>
-          <h3 class='text-primary'> 
-              <span class='fas fa-times'></span> Something broke.
-            </h3> 
-          <p>That's not good. Feel free to contact me directly at:</p>
-          <p style='margin: 10px auto;'>
-              <a 
-              rel="noreferrer"
-              target='_blank' 
-              href='mailto:Ryan@ryansrimrepair.com' 
-              style='font-size: 16px;' class='text-secondary'>
-                Ryan@RyansRimRepair.com
-              </a>
-          </p>
-          <p style='margin: 10px auto;'>
-              <a 
-              rel="noreferrer"
-              target='_blank' 
-              href='tel:+16146203350' 
-              style='font-size: 16px;' class='text-secondary'>
-                (614) 620-3350
-              </a>
-          </p>
-          
-        </div>
+      </div> 
+      <!-- End contact form div-->
     </section>
 
     <footer class='bg-primary'>
@@ -243,12 +245,19 @@
         &copy; Ryan's Rim Repair 2018
       </div>
       <div class="design-by">
-        <span> 
-          Hosted by <a href="#" class="design-by-link text-tertiary">Bernard Technology Partners</a> 
-        </span>
-        <span> 
-          Design by <a href='#' class="design-by-link text-tertiary">Max Bernard Web Design</a> 
-        </span>
+        <a href="https://www.bernardtechpartners.com" 
+        target='_blank' 
+        rel="noopener noreferrer"
+        class="design-by-link text-tertiary">
+          Hosted by Bernard Technology Partners</a> 
+        </a>
+        <a href='https://maxbernard.design' 
+        target='_blank' 
+        rel="noopener noreferrer"
+        class="design-by-link text-tertiary">
+          Design by Max Bernard Web Design
+        </a> 
+
       </div>
     </footer>
     

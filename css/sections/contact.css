@@ -75,21 +75,17 @@
 }
 
 .fade-base {
-    transition: top .4s, opacity .2s, max-height .2s;
+    transition: top 1s, opacity .5s, max-height 1s;
     opacity: 0;
     z-index: 1;
     overflow: hidden;
-    /* position: absolute;
-    left: 50%;
-    top: 80px;
-    transform: translateX(-50%); */
     max-height: 0px;
 }
 
 .fade-reveal {
     /* With a max-height fade animated so long(relatively speaking), 
     it shows the animation then closes the element from interaction. */
-    transition: top .5s, opacity .2s, max-height .3s;
+    transition: top 1s, opacity .5s, max-height 1s;
     opacity: 1;
     z-index: 100;
     overflow: hidden;
