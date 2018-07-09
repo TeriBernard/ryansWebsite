@@ -1,7 +1,8 @@
 <?php 
-// Separate field for actual login info, or just hardcode below
+// Login values
 require('email_login.php');
 
+// Grabs sanitized values from global
 global $ezee_email_vals;
 $name = $ezee_email_vals['name'];
 $email = $ezee_email_vals['email'];
@@ -11,7 +12,7 @@ $ezee_email_send_from_config = [
     'encryption_type' => 'tls', // (optional) 'ssl' or 'tls' 
     'port' => 587, 
     'server' => 'smtp.gmail.com', // Can also take secondary server separated by a comma
-    'email' => [$my_secret_email, 'Ryan\'s Rim Restoration'],
+    'email' => [$my_secret_email, "Ryan's Rim Restoration"],
     'password' => $my_secret_pass // Password for address server
 ];
 
@@ -20,7 +21,7 @@ $ezee_email_send_to_config = [
     // If you want to send a 'name' when you have only one recipient,
     // this still needs to be an array of arrays
     'addresses' => [
-        [$my_secret_email, 'Ryan\'s Rim Restoration'],
+        [$my_secret_email, "Ryan's Rim Restoration"],
     ],
     'subject' => "Contact from $name",
     'reply_to' => [$email, $name]
@@ -28,15 +29,13 @@ $ezee_email_send_to_config = [
 
 // (required)
 $ezee_email_value_options = [
-    'limit_to_required' => false,
-    'fail_on_value_overload' => false, 
-    // Using this without flags or required keys is not as safe
-    // 'required_values' => [
-    //     'name' => null,
-    //     'phone' => null,
-    //     'email' => null,
-    //     'message' => null,
-    // ]
-    // TODO 
-    // optional_values => []
+    // Using this without flags or required_values is not as safe
+    'required_values' => [
+        // 'null' values means the key has to exist
+        'name'  => null,
+        'phone' => null,
+        'email' => null,
+        // '(opt)' value means key is optional, and can hold any kind of data.
+        'message' => '(opt)',
+    ]
 ];
