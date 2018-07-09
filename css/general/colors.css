@@ -25,13 +25,13 @@ so I try to only add what I need.
 
 /* Primary color(started as red) */
 .text-primary{
-    color: rgb(108, 59, 58);
+    color: rgb(147, 56, 50);
 }
 .bg-primary {
-    background-color: rgb(108, 59, 58);
+    background-color: rgb(147, 56, 50);
 }
 .border-primary {
-    border-color: rgb(108, 59, 58);
+    border-color: rgb(147, 56, 50);
 }
 
 /* Secondary color(gallery background, 'contact' heading color, ...etc) */
