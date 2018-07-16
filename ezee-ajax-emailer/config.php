@@ -21,7 +21,7 @@ $ezee_email_send_to_config = [
     // If you want to send a 'name' when you have only one recipient,
     // this still needs to be an array of arrays
     'addresses' => [
-        [$my_secret_email, "Ryan's Rim Restoration"],
+        ['ryan@ryansrimrestoration.com', "Ryan's Rim Restoration"],
     ],
     'subject' => "Contact from $name",
     'reply_to' => [$email, $name]
